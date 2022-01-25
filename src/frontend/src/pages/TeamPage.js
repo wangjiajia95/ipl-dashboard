@@ -53,7 +53,7 @@ export const TeamPage = () => {
       <MatchDetailCard teamName={team.teamName} match={team.matches[0]}/> 
     </div>
     {/* remove first use slice */}
-      {team.matches.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match}/>)}
+      {team.matches.slice(1).map(match => <MatchSmallCard key={match.id} teamName={team.teamName} match={match}/>)}
       
       {/* More takes to teams matches in 2020, can change to anything */}
       <div className="more-link">

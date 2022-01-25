@@ -16,7 +16,10 @@ export const YearSelector = ({teamName}) => {
     <ol className='YearSelector'>
       {/* use () to seperate component to different lines */}
       {years.map(year => (
-      <li>
+        
+      // need unique id of dom 
+      <li key={year}>
+        
         <Link to={`/teams/${teamName}/matches/${year}`} >{year}</Link>
       </li>))}
 
